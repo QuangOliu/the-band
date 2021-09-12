@@ -1,11 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     border: none;
 }
 
-html{
+html {
     font-family: Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
 }
@@ -20,8 +20,7 @@ html{
     color: white !important;
 }
 
-
-.text-center{
+.text-center {
     text-align: center !important;
 }
 
@@ -29,16 +28,15 @@ html{
     margin-bottom: 16px !important;
 }
 
-
 .mb-8 {
     margin-bottom: 8px !important;
 }
 
-.row{
+.row {
     margin: 0 -8px 0;
 }
 
-.row::after{
+.row::after {
     content: "";
     display: block;
     clear: both;
@@ -48,34 +46,34 @@ html{
     float: left;
     padding: 0 8px;
 }
-.col-full{
+.col-full {
     width: 100%;
 }
-.col-half{
+.col-half {
     width: 50%;
 }
-.col-third{
+.col-third {
     width: 33.3333%;
 }
-.btn{
+.btn {
     display: inline-block;
     background: #000;
     color: white;
     padding: 11px 17px;
-    &:hover{
+    &:hover {
         color: #000;
         background-color: #ccc;
         cursor: pointer;
     }
 }
-.float-end{
+.float-end {
     display: flex;
     justify-content: end;
     a {
-        color:#2196F3;
+        color: #2196f3;
     }
 }
-.input {   
+.input {
     border: 1px solid #ccc;
     padding: 11px 16px;
     outline: none;
@@ -83,36 +81,41 @@ html{
     width: 100%;
 }
 // comon
-a, li,ul {
+a,
+li,
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
     box-sizing: border-box;
 }
 
-#header{
+#header {
     height: 46px;
     background-color: #000;
-    position:fixed;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1;
+    display: flex;
 }
 
-#nav{
+#nav {
     display: flex;
-    display: inline-block;
-    height: 46px;
+    // display:block;
+    // height: 46px;
     // display: inline-block;
     li {
-        display: inline-block;
-        line-height: 46px; 
+        // display: inline-block;
+        display: block;
+        line-height: 46px;
         position: relative;
-        height: 100%;
+        // height: 100%;
     }
     a {
-        display: inline-block;
+        // display: inline-block;
+        display: block;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -124,22 +127,19 @@ a, li,ul {
         font-size: 14px;
     }
     .subnav li:hover a,
-    >li:hover > a {
+    > li:hover > a {
         color: #000;
         background-color: #ccc;
         transition: all 0.25s ease;
     }
-    li:hover .subnav{
-        opacity: 1;
-        visibility: visible;
+    li:hover .subnav {
+        display: block;
     }
     .subnav {
-        background-color: white !important;
+        background-color: white;
         box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.3);
-        opacity: 0;
+        display: none;
         min-width: 160px;
-        visibility: hidden;
-        transition: all .25s ease-in-out;
         position: absolute;
         top: 100%;
         li {
@@ -148,21 +148,22 @@ a, li,ul {
         }
         a {
             color: #000;
-            background-color: white;
             display: block;
             padding: 0 14px;
-            width: 100% ;
+            width: 100%;
             text-transform: capitalize;
         }
     }
 }
 
-
+.header__bar,
 .search {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     line-height: 46px;
     padding: 0 23px;
-    height: 100%;
+    // height: 100%;
     &__btn {
         color: white;
     }
@@ -172,12 +173,19 @@ a, li,ul {
         transition: all 0.25s ease-in-out;
     }
 }
-
-#slider{
+.header__bar {
+    display: none;
+    color: white;
+    &:hover {
+        background: white;
+        color: #000;
+    }
+}
+#slider {
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url("./asset/img/chicago.jpg") top center / cover no-repeat;
+    background: url("asset/img/chicago.jpg") top center / cover no-repeat;
     .text-content {
         position: absolute;
         bottom: 47px;
@@ -190,16 +198,16 @@ a, li,ul {
         font-size: 24px;
         margin-bottom: 25px;
     }
-    .dis{
+    .dis {
         font-size: 15px;
     }
 }
 
 .content {
-    &__section{
+    &__section {
         max-width: 800px;
         margin: 0 auto;
-        padding: 70px 0 112px;
+        padding: 70px 16px 112px;
         line-height: 1.4;
         font-size: 15px;
     }
@@ -217,44 +225,43 @@ a, li,ul {
     }
 }
 .about {
-    &__sub{
+    &__sub {
         text-align: justify;
         font-size: 15px;
         margin-bottom: 47px;
     }
 
-    &__name{
+    &__name {
         margin: 15px 0;
         text-transform: capitalize;
     }
 
-    &__img{
+    &__img {
         width: 154px;
         border-radius: 4px;
     }
-
 }
 
-.tour{
+.tour {
     background-color: #000;
-    &__ticket{
+    &__ticket {
         background-color: white;
         margin-bottom: 32px;
-        & li{
+        & li {
             padding: 9px 16px;
             color: #757575;
             border-bottom: 1px solid #ddd;
-        }   
+        }
     }
 
-    &__soud{
+    &__soud {
         padding: 3px 8px;
         background-color: #f44336;
         color: white;
         margin-left: 13px;
     }
 
-    &__quatity{
+    &__quatity {
         float: right;
         width: 24px;
         height: 24px;
@@ -266,7 +273,7 @@ a, li,ul {
         line-height: 24px;
     }
 
-    &__img{
+    &__img {
         width: 100%;
         display: block;
         &:hover {
@@ -274,19 +281,18 @@ a, li,ul {
         }
     }
 
-    &__info{
+    &__info {
         padding: 16px;
         background-color: white;
         p {
-            padding-bottom: 15px ;
+            padding-bottom: 15px;
         }
     }
 
-    &__time{
+    &__time {
         opacity: 0.7;
         color: #000;
     }
-    
 }
 
 .model {
@@ -295,33 +301,34 @@ a, li,ul {
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     font-size: 15px;
     justify-content: center;
     align-items: center;
     display: none;
-    &__container{
+    &__container {
         background-color: white;
         width: 900px;
+        max-width: calc(100% - 32px);
         min-height: 200px;
         position: relative;
         animation: showBuy ease 0.5s;
     }
 
-    &__close{
+    &__close {
         position: absolute;
         top: 0;
         right: 0;
         padding: 12px;
         color: white;
-        &:hover{
+        &:hover {
             opacity: 0.8;
             background-color: #11ccb9;
-        } 
+        }
     }
 
-    &__heading{
+    &__heading {
         background-color: #009688;
         color: white;
         font-size: 30px;
@@ -337,7 +344,7 @@ a, li,ul {
     &__body {
         padding: 16px;
         padding-bottom: 30px;
-        input{
+        input {
             margin-bottom: 20px;
         }
     }
@@ -346,7 +353,7 @@ a, li,ul {
         display: block;
         margin-bottom: 8px;
     }
-    
+
     &__btn {
         background: #009688;
         color: white;
@@ -354,7 +361,7 @@ a, li,ul {
         width: 100%;
         padding: 19px;
         margin-bottom: 31px;
-        &:hover{
+        &:hover {
             background-color: #11ccb9;
             cursor: pointer;
         }
@@ -372,21 +379,21 @@ a, li,ul {
     }
 }
 
-.contract{
+.contract {
     &__content {
         font-size: 18px;
         font-weight: 500;
         line-height: 1.5;
         padding-top: 32px;
 
-        i[class*="ti-"]{
+        i[class*="ti-"] {
             width: 24px;
             display: inline-block;
         }
     }
 }
 .map {
-    img{
+    img {
         width: 100%;
         filter: grayscale(50%);
     }
@@ -395,24 +402,22 @@ a, li,ul {
     padding: 64px 16px;
     text-align: center;
     p,
-    p a{
-        color: rgba(0,0,0,0.6); 
-        
+    p a {
+        color: rgba(0, 0, 0, 0.6);
     }
     p {
         margin: 15px 0;
     }
 }
 .social-list {
-
     display: flex;
     justify-content: center;
-    a{
+    a {
         margin: 0 2px;
         font-size: 24px;
         text-decoration: none;
-        color: rgba(0,0,0,0.6);
-        &:hover{
+        color: rgba(0, 0, 0, 0.6);
+        &:hover {
             opacity: 0.4;
         }
     }

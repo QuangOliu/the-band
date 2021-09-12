@@ -87,7 +87,7 @@ html {
 }
 
 .float-end a {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 .input {
@@ -99,7 +99,9 @@ html {
   width: 100%;
 }
 
-a, li, ul {
+a,
+li,
+ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -115,25 +117,25 @@ a, li, ul {
   right: 0;
   left: 0;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: inline-block;
-  height: 46px;
 }
 
 #nav li {
-  display: inline-block;
+  display: block;
   line-height: 46px;
   position: relative;
-  height: 100%;
 }
 
 #nav a {
-  display: inline-block;
+  display: block;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
@@ -155,19 +157,15 @@ a, li, ul {
 }
 
 #nav li:hover .subnav {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 #nav .subnav {
-  background-color: white !important;
+  background-color: white;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  opacity: 0;
+  display: none;
   min-width: 160px;
-  visibility: hidden;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
   position: absolute;
   top: 100%;
 }
@@ -179,24 +177,27 @@ a, li, ul {
 
 #nav .subnav a {
   color: #000;
-  background-color: white;
   display: block;
   padding: 0 14px;
   width: 100%;
   text-transform: capitalize;
 }
 
+.header__bar,
 .search {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   line-height: 46px;
   padding: 0 23px;
-  height: 100%;
 }
 
+.header__bar__btn,
 .search__btn {
   color: white;
 }
 
+.header__bar:hover,
 .search:hover {
   cursor: pointer;
   background-color: #f44336;
@@ -204,11 +205,21 @@ a, li, ul {
   transition: all 0.25s ease-in-out;
 }
 
+.header__bar {
+  display: none;
+  color: white;
+}
+
+.header__bar:hover {
+  background: white;
+  color: #000;
+}
+
 #slider {
   position: relative;
   margin-top: 46px;
   padding-top: 50%;
-  background: url("./asset/img/chicago.jpg") top center/cover no-repeat;
+  background: url("../img/chicago.jpg") top center/cover no-repeat;
 }
 
 #slider .text-content {
@@ -232,7 +243,7 @@ a, li, ul {
 .content__section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 70px 0 112px;
+  padding: 70px 16px 112px;
   line-height: 1.4;
   font-size: 15px;
 }
@@ -345,6 +356,7 @@ a, li, ul {
 .model__container {
   background-color: white;
   width: 900px;
+  max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
   -webkit-animation: showBuy ease 0.5s;
