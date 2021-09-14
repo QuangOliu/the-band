@@ -50,6 +50,7 @@ html {
 .col {
   float: left;
   padding: 0 8px;
+  margin-bottom: 16px;
 }
 
 .col-full {
@@ -68,7 +69,12 @@ html {
   display: inline-block;
   background: #000;
   color: white;
-  padding: 11px 17px;
+  padding: 15px 17px;
+  text-align: center;
+  font-size: 15px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .btn:hover {
@@ -92,7 +98,8 @@ html {
 
 .input {
   border: 1px solid #ccc;
-  padding: 11px 16px;
+  padding: 14px 16px;
+  font-size: 15px;
   outline: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -243,7 +250,7 @@ ul {
 .content__section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 70px 16px 112px;
+  padding: 70px 16px 96px;
   line-height: 1.4;
   font-size: 15px;
 }
@@ -265,7 +272,7 @@ ul {
 .about__sub {
   text-align: justify;
   font-size: 15px;
-  margin-bottom: 47px;
+  margin-bottom: 32px;
 }
 
 .about__name {

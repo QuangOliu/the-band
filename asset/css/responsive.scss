@@ -1,4 +1,18 @@
 @media screen and (max-width: 768px) {
+    .s-width-full,
+    .s-col-full {
+        width: 100% !important; 
+    }
+
+    .s-mt--8 {
+        margin-top: -8px !important;
+    }
+
+    .s-mt--16 {
+        margin-top: -16px !important;
+    }
+
+    
     #header {
         overflow: hidden;
     }
@@ -10,7 +24,7 @@
         }
         .subnav {
             position: inherit;
-            background: #000;
+            background: rgba($color: #000000, $alpha: 0.7) ;
             a {
                 color: #fff;
                 padding: 0 40px;
@@ -23,5 +37,29 @@
     }
     .header__bar {
         display: block;
+    }
+
+    #slider {
+        .text-content {
+            display: none;
+        }
+    }
+
+    .about {
+        &__img {
+            width: 60%;
+        }
+    }
+
+    .social-list{
+        a{
+            margin: 0 14px;
+        }
+    }
+
+    .footer {
+        p a{
+            padding: 10px 0;
+        }
     }
 }

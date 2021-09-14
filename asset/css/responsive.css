@@ -1,4 +1,14 @@
 @media screen and (max-width: 768px) {
+  .s-width-full,
+  .s-col-full {
+    width: 100% !important;
+  }
+  .s-mt--8 {
+    margin-top: -8px !important;
+  }
+  .s-mt--16 {
+    margin-top: -16px !important;
+  }
   #header {
     overflow: hidden;
   }
@@ -11,7 +21,7 @@
   }
   #nav .subnav {
     position: inherit;
-    background: #000;
+    background: rgba(0, 0, 0, 0.7);
   }
   #nav .subnav a {
     color: #fff;
@@ -22,6 +32,18 @@
   }
   .header__bar {
     display: block;
+  }
+  #slider .text-content {
+    display: none;
+  }
+  .about__img {
+    width: 60%;
+  }
+  .social-list a {
+    margin: 0 14px;
+  }
+  .footer p a {
+    padding: 10px 0;
   }
 }
 /*# sourceMappingURL=responsive.css.map */
